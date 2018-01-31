@@ -17,6 +17,7 @@ cat >> /usr/local/bin/entry.sh << EOF
 if [ ! -f /errbot/config.py ]; then
     errbot --init
 fi
+touch errbot.log
 errbot -d
 tail -f errbot.log
 EOF
