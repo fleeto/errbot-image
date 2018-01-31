@@ -17,9 +17,8 @@ cat >> /usr/local/bin/entry.sh << EOF
 if [ ! -f /errbot/config.py ]; then
     errbot --init
 fi
-errbot
+errbot -d
+tail -f errbot.log
 EOF
 
 chmod a+x /usr/local/bin/entry.sh
-
-# Remove all
